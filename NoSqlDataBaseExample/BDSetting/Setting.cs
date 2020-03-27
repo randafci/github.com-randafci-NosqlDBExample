@@ -9,12 +9,6 @@ namespace NoSqlDataBaseExample.BDSetting
 {
     public class Setting<T> : Isetting<T> where T:class
     {
-         
-
-     
-            
-        
-
         public T Add (T item, string  Name)
         {
 
