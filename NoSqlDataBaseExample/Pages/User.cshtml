@@ -1,0 +1,37 @@
+﻿@page
+@model NoSqlDataBaseExample.UserModel
+@{
+    ViewData["Title"] = "User";
+}
+
+    <body>
+        <form method="post">
+            <input asp-for="Email" />
+            <br />
+            <input asp-for="Name" />
+            <br />
+            <input type="submit" />
+        </form>
+        <div>
+            <table>
+                @if (Model.user != null)
+                {
+                @foreach (var item in Model.user)
+                {
+                <tr>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                </tr>
+                }
+                }
+            </table>
+        </div>
+    </body>
+<h1>User</h1>
+
